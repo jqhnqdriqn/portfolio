@@ -1,7 +1,21 @@
-/* main.js — Shared JS */
+/* main.js v3 — Dark mode, FAQ accordion, Portfolio dropdown */
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Sticky Nav
+  /* ── DARK MODE ─────────────────────────────────────────────── */
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+
+  const themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  /* ── STICKY NAV ────────────────────────────────────────────── */
   const nav = document.querySelector('.nav');
   if (nav) {
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
@@ -9,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  // Mobile Nav Toggle
+  /* ── MOBILE NAV ────────────────────────────────────────────── */
   const toggle = document.querySelector('.nav__toggle');
   const mobileMenu = document.querySelector('.nav__mobile');
   if (toggle && mobileMenu) {
@@ -25,16 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active Nav Link
+  /* ── ACTIVE NAV LINK ───────────────────────────────────────── */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (href && (href === currentPage || (currentPage === '' && href === 'index.html'))) {
       link.classList.add('active');
     }
   });
+  // Also mark portfolio parent as active on portfolio pages
+  if (currentPage.startsWith('portfolio')) {
+    document.querySelectorAll('.nav__item .nav__item-label').forEach(el => el.classList.add('active'));
+  }
 
-  // Back-to-Top
+  /* ── BACK TO TOP ───────────────────────────────────────────── */
   const btt = document.querySelector('.back-to-top');
   if (btt) {
     window.addEventListener('scroll', () => {
@@ -43,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
-  // Scroll Reveal
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
     const observer = new IntersectionObserver((entries) => {
@@ -57,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => observer.observe(el));
   }
 
-  // Typing Role Cycler
+  /* ── TYPING ROLE CYCLER ────────────────────────────────────── */
   const roleEl = document.querySelector('.hero__role-text');
   if (roleEl) {
-    const roles = ['SEO Content Specialist','AI Content Editor','Website Operations','On-Page SEO Expert'];
+    const roles = ['SEO Content Specialist', 'AI Content Editor', 'Website Operations', 'On-Page SEO Expert'];
     let roleIndex = 0, charIndex = 0, deleting = false, paused = false;
     const type = () => {
       if (paused) return;
@@ -68,18 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!deleting) {
         roleEl.textContent = current.slice(0, charIndex + 1);
         charIndex++;
-        if (charIndex === current.length) { deleting = true; paused = true; setTimeout(() => { paused = false; }, 2000); }
+        if (charIndex === current.length) { deleting = true; paused = true; setTimeout(() => { paused = false; }, 2200); }
       } else {
         roleEl.textContent = current.slice(0, charIndex - 1);
         charIndex--;
         if (charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
       }
-      setTimeout(type, deleting ? 50 : 90);
+      setTimeout(type, deleting ? 48 : 88);
     };
-    setTimeout(type, 800);
+    setTimeout(type, 900);
   }
 
-  // Animated Counters
+  /* ── ANIMATED COUNTERS ─────────────────────────────────────── */
   const counters = document.querySelectorAll('.stat-num[data-target]');
   if (counters.length) {
     const countObserver = new IntersectionObserver((entries) => {
@@ -103,7 +121,20 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => countObserver.observe(c));
   }
 
-  // Portfolio Filter Tabs
+  /* ── FAQ ACCORDION ─────────────────────────────────────────── */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    }
+  });
+
+  /* ── PORTFOLIO FILTER ──────────────────────────────────────── */
   const filterTabs = document.querySelectorAll('.filter-tab');
   const portfolioCards = document.querySelectorAll('.portfolio-card[data-cat]');
   if (filterTabs.length && portfolioCards.length) {
@@ -123,24 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // FAQ Accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-  if (faqItems.length) {
-    faqItems.forEach(item => {
-      const trigger = item.querySelector('.faq-trigger');
-      if (trigger) {
-        trigger.addEventListener('click', () => {
-          const isOpen = item.classList.contains('open');
-          // Close all
-          faqItems.forEach(i => i.classList.remove('open'));
-          // Open clicked if it was closed
-          if (!isOpen) item.classList.add('open');
-        });
-      }
-    });
-  }
-
-  // Contact Form
+  /* ── CONTACT FORM ──────────────────────────────────────────── */
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -163,14 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Smooth anchor scroll
+  /* ── SMOOTH ANCHOR ─────────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const offset = 68;
-        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
       }
     });
   });
