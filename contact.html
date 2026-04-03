@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact — John Adrian Delos Santos</title>
-  <meta name="description" content="Get in touch with John Adrian Delos Santos for SEO content, on-page optimization, and website operations projects."/>
+  <meta name="description" content="Get in touch with John Adrian Delos Santos for SEO content, optimization, and website operations projects."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="css/style.css"/>
@@ -13,19 +13,34 @@
 
 <nav class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <span class="nav__logo-name">John Adrian Delos Santos</span>
-      <span class="nav__logo-sub">SEO Content Specialist</span>
-    </a>
+    <a href="index.html" class="nav__logo"><span class="nav__logo-name">John Adrian Delos Santos</span><span class="nav__logo-sub">SEO Content Specialist</span></a>
     <div class="nav__links">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="blog.html">Blog</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <div class="nav__item"><a href="portfolio.html" class="nav__item-label">Portfolio ▾</a>
+        <div class="nav__dropdown">
+          <a href="portfolio-builtfront.html"><span class="nav__dropdown-num">01</span>Builtfront SEO Growth</a>
+          <a href="portfolio-maxim.html"><span class="nav__dropdown-num">02</span>Maxim Hair Service Pages</a>
+          <a href="portfolio-heworitz.html"><span class="nav__dropdown-num">03</span>Heworitz Product Page</a>
+          <a href="portfolio-technical-audit.html"><span class="nav__dropdown-num">04</span>Real Estate Technical Audit</a>
+          <a href="portfolio-schema.html"><span class="nav__dropdown-num">05</span>Construction Schema Markup</a>
+          <a href="portfolio-workflow.html"><span class="nav__dropdown-num">06</span>Multi-Site Workflow</a>
+        </div>
+      </div>
+      <a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="blog.html">Blog</a>
     </div>
-    <a href="contact.html" class="nav__cta" style="background:var(--accent-dark)">Let's Talk</a>
-    <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav__right">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+      <a href="contact.html" class="nav__cta" style="background:var(--accent-dark)">Let's Talk</a>
+      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 <div class="nav__mobile">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <div class="nav__mobile-section">Portfolio</div>
+  <a href="portfolio.html" style="padding-left:1rem;font-size:.8rem">All</a>
+  <a href="portfolio-builtfront.html" style="padding-left:1rem;font-size:.8rem">01</a><a href="portfolio-maxim.html" style="padding-left:1rem;font-size:.8rem">02</a><a href="portfolio-heworitz.html" style="padding-left:1rem;font-size:.8rem">03</a><a href="portfolio-technical-audit.html" style="padding-left:1rem;font-size:.8rem">04</a><a href="portfolio-schema.html" style="padding-left:1rem;font-size:.8rem">05</a><a href="portfolio-workflow.html" style="padding-left:1rem;font-size:.8rem">06</a>
+  <a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
 </div>
 
 <header class="page-header">
@@ -42,7 +57,7 @@
       <!-- Contact Info -->
       <div class="reveal">
         <span class="label">Contact Information</span>
-        <h2 style="font-size:clamp(1.5rem,3vw,2rem);margin-bottom:2rem">Available for<br><em class="italic">freelance projects</em></h2>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:2rem">Available for<br><em class="italic">Freelance Projects</em></h2>
 
         <div class="contact-info__item">
           <div class="contact-info__icon">✉</div>
@@ -53,10 +68,18 @@
         </div>
 
         <div class="contact-info__item">
-          <div class="contact-info__icon">in</div>
+          <div class="contact-info__icon" style="font-size:.8rem;font-weight:700">in</div>
           <div>
             <div class="contact-info__label">LinkedIn</div>
             <div class="contact-info__value"><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" style="color:var(--accent)">linkedin.com/in/john-adrian-delos-santos</a></div>
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon" style="font-size:.8rem;font-weight:700">UP</div>
+          <div>
+            <div class="contact-info__label">Upwork</div>
+            <div class="contact-info__value"><a href="https://www.upwork.com/freelancers/~0129099dc799132256?mp_source=share" target="_blank" rel="noopener" style="color:var(--accent)">View Upwork Profile</a></div>
           </div>
         </div>
 
@@ -76,9 +99,9 @@
           </div>
         </div>
 
-        <div style="margin-top:2rem;padding:1.5rem;background:var(--accent-light);border:1px solid var(--accent)">
-          <h4 style="letter-spacing:0;font-size:.9rem;margin-bottom:.5rem;color:var(--accent-dark)">Currently Available</h4>
-          <p style="font-size:.88rem;color:var(--accent-dark)">Open to new freelance projects and long-term collaborations in SEO content, on-page optimization, and content operations.</p>
+        <div style="margin-top:1.5rem;padding:1.5rem;background:var(--accent-light);border:1px solid var(--accent)">
+          <h4 style="letter-spacing:0;font-size:.95rem;margin-bottom:.5rem;color:var(--accent-dark);font-family:var(--font-body)">Currently Available</h4>
+          <p style="font-size:.92rem;color:var(--accent-dark)">Open to new freelance projects and long-term collaborations in SEO content, on-page optimization, and content operations.</p>
         </div>
       </div>
 
@@ -118,7 +141,7 @@
           </div>
           <div class="form-group">
             <label for="message">Tell Me About Your Project</label>
-            <textarea id="message" name="message" placeholder="What are you working on? What problems are you trying to solve? The more detail the better." required></textarea>
+            <textarea id="message" name="message" placeholder="What are you working on? What problems are you trying to solve? The more detail, the better." required></textarea>
           </div>
           <button type="submit" class="btn btn--filled" style="width:100%;justify-content:center">
             <span>Send Message</span>
@@ -133,7 +156,7 @@
 
 <div class="divider"></div>
 
-<!-- FAQ — Accordion -->
+<!-- FAQ — Accordion dropdown -->
 <section class="section section--alt">
   <div class="container">
     <div class="section-head reveal">
@@ -146,73 +169,49 @@
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>How quickly can you start?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>Typically within a few days of our initial conversation. Reach out, tell me what you need, and we can figure out timing from there.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>Typically within a few days of our initial conversation. Reach out, tell me what you need, and we can figure out timing from there.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>Do you work with clients outside the Philippines?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>Yes, absolutely. Almost all of my work is done remotely and I'm comfortable working across different time zones. Location has never been an issue.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>Yes, absolutely. Almost all of my work is done remotely and I'm comfortable working across different time zones. Location has never been an issue.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>What industries do you have experience in?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>Construction, B2B SaaS, rental management, real estate, and more. I adapt to the tone, audience, and requirements of each industry and client brief. Most of what makes good SEO content work is consistent across industries.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>Construction, B2B SaaS, rental management, real estate, finance, eCommerce, and more. I adapt to the tone, audience, and requirements of each industry and client brief. Most of what makes good SEO content work is consistent across industries.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>Can you manage multiple sites at once?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>Yes. Managing content operations across multiple client websites simultaneously is one of my core strengths. I've handled up to 8 sites at once with consistent quality across all of them.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>Yes. Managing content operations across multiple client websites simultaneously is one of my core strengths. I've handled up to 8 sites at once with consistent quality across all of them.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>Do you only write, or do you publish too?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>Both. I can handle the full process from writing to WordPress publishing and formatting, or just the parts you need. If you have a team that writes but needs someone to handle publishing and SEO setup properly, that's something I do too.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>Both. I can handle the full process from writing to WordPress publishing and formatting, or just the parts you need. If you have a team that writes but needs someone to handle publishing and SEO setup properly, that's something I do too.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
           <h4>How do you handle AI-generated content?</h4>
-          <span class="faq-icon">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
-          </span>
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg></span>
         </button>
-        <div class="faq-body">
-          <div class="faq-body-inner"><p>I review, edit, and humanize AI drafts to make sure they're factually accurate, clearly written, and optimized for search intent. I've built workflows specifically for this at previous agencies, so I know what to look for and how to improve it efficiently.</p></div>
-        </div>
+        <div class="faq-body"><div class="faq-body-inner"><p>I review, edit, and humanize AI drafts to make sure they're factually accurate, clearly written, and optimized for search intent. I've built workflows specifically for this at previous agencies, so I know what to look for and how to improve it efficiently.</p></div></div>
       </div>
 
     </div>
@@ -221,10 +220,10 @@
 
 <footer class="footer"><div class="container">
   <div class="footer__grid">
-    <div><a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a><p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Based in the Philippines, available worldwide.</p><div class="footer__social-links"><a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://jqhnqdriqn.github.io/portfolio" target="_blank" rel="noopener" aria-label="GitHub">⌂</a></div></div>
+    <div><a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a><p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Available worldwide.</p><div class="footer__social-links"><a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener" aria-label="Upwork">U</a></div></div>
     <div class="footer__col"><h5>Pages</h5><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="tools.html">Tools</a><a href="skills.html">Skills</a></div>
-    <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" download>Download CV</a></div>
-    <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+    <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank">View CV</a></div>
+    <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener">Upwork Profile</a></div>
   </div>
   <div class="footer__bottom"><p class="footer__copy">© 2026 John Adrian Delos Santos. All rights reserved.</p><p class="footer__location"><span>📍</span> Taguig City, Philippines · Available for Freelance</p></div>
 </div></footer>
