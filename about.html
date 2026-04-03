@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — John Adrian Delos Santos</title>
-  <meta name="description" content="About John Adrian Delos Santos, SEO Content Specialist with 2+ years managing content and on-page SEO across multiple industries."/>
+  <meta name="description" content="About John Adrian Delos Santos — SEO Content Specialist with 2+ years managing content and on-page SEO across multiple industries."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="css/style.css"/>
@@ -13,25 +13,47 @@
 
 <nav class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <span class="nav__logo-name">John Adrian Delos Santos</span>
-      <span class="nav__logo-sub">SEO Content Specialist</span>
-    </a>
+    <a href="index.html" class="nav__logo"><span class="nav__logo-name">John Adrian Delos Santos</span><span class="nav__logo-sub">SEO Content Specialist</span></a>
     <div class="nav__links">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
+      <div class="nav__item">
+        <a href="portfolio.html" class="nav__item-label">Portfolio ▾</a>
+        <div class="nav__dropdown">
+          <a href="portfolio-builtfront.html"><span class="nav__dropdown-num">01</span>Builtfront SEO Growth</a>
+          <a href="portfolio-maxim.html"><span class="nav__dropdown-num">02</span>Maxim Hair Service Pages</a>
+          <a href="portfolio-heworitz.html"><span class="nav__dropdown-num">03</span>Heworitz Product Page</a>
+          <a href="portfolio-technical-audit.html"><span class="nav__dropdown-num">04</span>Real Estate Technical Audit</a>
+          <a href="portfolio-schema.html"><span class="nav__dropdown-num">05</span>Construction Schema Markup</a>
+          <a href="portfolio-workflow.html"><span class="nav__dropdown-num">06</span>Multi-Site Workflow</a>
+        </div>
+      </div>
       <a href="skills.html">Skills</a>
       <a href="tools.html">Tools</a>
       <a href="blog.html">Blog</a>
     </div>
-    <a href="contact.html" class="nav__cta">Let's Talk</a>
-    <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav__right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="contact.html" class="nav__cta">Let's Talk</a>
+      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 <div class="nav__mobile">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <div class="nav__mobile-section">Portfolio</div>
+  <a href="portfolio.html" style="padding-left:1rem;font-size:.8rem">All Projects</a>
+  <a href="portfolio-builtfront.html" style="padding-left:1rem;font-size:.8rem">01 — Builtfront</a>
+  <a href="portfolio-maxim.html" style="padding-left:1rem;font-size:.8rem">02 — Maxim</a>
+  <a href="portfolio-heworitz.html" style="padding-left:1rem;font-size:.8rem">03 — Heworitz</a>
+  <a href="portfolio-technical-audit.html" style="padding-left:1rem;font-size:.8rem">04 — Technical Audit</a>
+  <a href="portfolio-schema.html" style="padding-left:1rem;font-size:.8rem">05 — Schema</a>
+  <a href="portfolio-workflow.html" style="padding-left:1rem;font-size:.8rem">06 — Workflow</a>
+  <a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
 </div>
 
 <header class="page-header">
@@ -41,7 +63,7 @@
   </div>
 </header>
 
-<!-- MAIN ABOUT -->
+<!-- ABOUT MAIN -->
 <section class="section">
   <div class="container">
     <div class="about-layout">
@@ -51,29 +73,29 @@
           <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C9A961" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span>Photo Coming Soon</span>
         </div>
-        <div class="cv-section" style="margin-top:1.5rem">
-          <div>
-            <h3 style="font-size:1rem;margin-bottom:.35rem">My Resume</h3>
-            <p style="font-size:.85rem">Download or view my full CV</p>
+
+        <!-- CV — view only, no download button -->
+        <a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank" class="cv-view">
+          <div class="cv-view__icon">📄</div>
+          <div class="cv-view__text">
+            <h4>View My CV</h4>
+            <p>Opens in a new tab</p>
           </div>
-          <div class="cv-section__btns">
-            <a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" class="btn btn--gold" download><span>Download</span></a>
-            <a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" class="btn" target="_blank"><span>View PDF</span></a>
-          </div>
-        </div>
+          <span class="cv-view__arrow">↗</span>
+        </a>
       </div>
 
       <div class="about-content reveal reveal-delay-1">
         <span class="label">Hi, I'm John</span>
-        <h2 style="margin-bottom:1.5rem">SEO Specialist and <em class="italic">Content Operator</em></h2>
-        <p>I'm an SEO content specialist based in Taguig City, Philippines. Most of my work involves making sure websites stay clean, consistent, and properly optimized. Not the flashy strategy side, but the hands-on execution that actually keeps things running.</p>
+        <h2 style="margin-bottom:1.5rem">SEO Specialist and<br><em class="italic">Content Operator</em></h2>
+        <p>I'm an SEO content specialist based in Taguig City, Philippines. Most of my work involves making sure websites stay clean, consistent, and properly optimized. Not the flashy strategy side — the hands-on execution that actually keeps things running.</p>
         <p>Over the past two years I've worked across 15 client websites in industries like construction, B2B SaaS, rental management, and real estate. I've published over 900 pieces of content and optimized 200+ pages using Surfer SEO.</p>
-        <p>What I care most about is reliability. If something is broken, I find it. If something is inconsistent, I fix it. I'm the kind of person who reads every meta description and checks every internal link because the small things matter more than people think.</p>
+        <p>What I care most about is reliability. If something is broken, I find it. If something is inconsistent, I fix it. I'm the kind of person who reads every meta description and checks every internal link — because the small things matter more than people think.</p>
 
         <!-- HOBBIES -->
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
-          <h4 style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;font-family:var(--font-body)">Outside of Work</h4>
-          <p style="margin-bottom:1rem;font-size:.92rem">When I'm not optimizing pages, I spend time playing guitar, exploring music, and picking up new creative skills. I find that having a creative outlet outside work actually makes me better at the detail-oriented stuff. It keeps the mind flexible.</p>
+          <h4 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;font-family:var(--font-body);font-weight:600">Outside of Work</h4>
+          <p style="margin-bottom:1rem;font-size:1rem">When I'm not optimizing pages, I spend time playing guitar and getting into music. I find that having a creative outlet outside of work actually helps with the detail-oriented stuff — it keeps the mind sharp and flexible.</p>
           <div class="hobby-pills">
             <span class="hobby-pill"><span class="hobby-pill__icon">🎸</span> Guitar</span>
             <span class="hobby-pill"><span class="hobby-pill__icon">🎵</span> Music</span>
@@ -91,7 +113,7 @@
 
 <div class="divider"></div>
 
-<!-- WHAT GUIDES MY WORK — redesigned numbered cards -->
+<!-- WHAT GUIDES MY WORK -->
 <section class="section section--alt">
   <div class="container">
     <div class="section-head reveal">
@@ -100,25 +122,25 @@
     </div>
     <div class="values-grid reveal reveal-delay-1">
       <div class="value-card">
-        <span class="value-card__tag">01</span>
         <div class="value-card__num">01</div>
         <div class="value-card__body">
+          <span class="value-card__tag">01</span>
           <h4>Consistency First</h4>
           <p>Every page, every post, every element should meet the same standard. No shortcuts, no half-measures. If it's worth publishing, it's worth doing properly.</p>
         </div>
       </div>
       <div class="value-card">
-        <span class="value-card__tag">02</span>
         <div class="value-card__num">02</div>
         <div class="value-card__body">
+          <span class="value-card__tag">02</span>
           <h4>Proactive, Not Reactive</h4>
           <p>I don't just do what's asked. I look for gaps, flag problems early, and fix issues before they turn into bigger ones. That's what keeps sites healthy long-term.</p>
         </div>
       </div>
       <div class="value-card">
-        <span class="value-card__tag">03</span>
         <div class="value-card__num">03</div>
         <div class="value-card__body">
+          <span class="value-card__tag">03</span>
           <h4>Long-Term Thinking</h4>
           <p>Quick wins feel good but they don't last. Sustainable SEO and content strategy is what I'm really after. I want the work to still matter six months from now.</p>
         </div>
@@ -129,7 +151,7 @@
 
 <div class="divider"></div>
 
-<!-- WORK EXPERIENCE — redesigned timeline -->
+<!-- WORK EXPERIENCE -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
@@ -180,7 +202,7 @@
 
 <div class="divider"></div>
 
-<!-- EDUCATION AND CERTIFICATIONS — redesigned cards -->
+<!-- EDUCATION AND CERTIFICATIONS -->
 <section class="section section--alt">
   <div class="container">
     <div class="section-head reveal">
@@ -210,34 +232,20 @@
 <div class="cta-strip">
   <div class="container">
     <h2>Ready to Work<br><em class="italic">Together?</em></h2>
-    <p>If you need someone who keeps your content and SEO running smoothly without constant supervision, let's talk.</p>
+    <p>Need someone who keeps your content and SEO running smoothly without constant supervision? Let's talk.</p>
     <a href="contact.html" class="btn btn--outline-dark"><span>Get In Touch</span></a>
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a>
-        <p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Based in the Philippines, available worldwide.</p>
-        <div class="footer__social-links">
-          <a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a>
-          <a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a href="https://jqhnqdriqn.github.io/portfolio" target="_blank" rel="noopener" aria-label="GitHub">⌂</a>
-        </div>
-      </div>
-      <div class="footer__col"><h5>Pages</h5><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="tools.html">Tools</a><a href="skills.html">Skills</a></div>
-      <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" download>Download CV</a></div>
-      <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a></div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2026 John Adrian Delos Santos. All rights reserved.</p>
-      <p class="footer__location"><span>📍</span> Taguig City, Philippines · Available for Freelance</p>
-    </div>
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div><a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a><p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Based in the Philippines, available worldwide.</p><div class="footer__social-links"><a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener" aria-label="Upwork">U</a></div></div>
+    <div class="footer__col"><h5>Pages</h5><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="tools.html">Tools</a><a href="skills.html">Skills</a></div>
+    <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank">View CV</a></div>
+    <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener">Upwork Profile</a></div>
   </div>
-</footer>
+  <div class="footer__bottom"><p class="footer__copy">© 2026 John Adrian Delos Santos. All rights reserved.</p><p class="footer__location"><span>📍</span> Taguig City, Philippines · Available for Freelance</p></div>
+</div></footer>
 <button class="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script src="js/main.js"></script>
 </body>
