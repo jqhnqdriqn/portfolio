@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services — John Adrian Delos Santos</title>
-  <meta name="description" content="SEO content writing, on-page SEO, technical SEO, content operations, WordPress publishing, and visual layout services."/>
+  <meta name="description" content="SEO content writing, on-page SEO, technical SEO, WordPress publishing, content operations, and visual layout services."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="css/style.css"/>
@@ -13,19 +13,39 @@
 
 <nav class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <span class="nav__logo-name">John Adrian Delos Santos</span>
-      <span class="nav__logo-sub">SEO Content Specialist</span>
-    </a>
+    <a href="index.html" class="nav__logo"><span class="nav__logo-name">John Adrian Delos Santos</span><span class="nav__logo-sub">SEO Content Specialist</span></a>
     <div class="nav__links">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="active">Services</a><a href="portfolio.html">Portfolio</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="blog.html">Blog</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="active">Services</a>
+      <div class="nav__item"><a href="portfolio.html" class="nav__item-label">Portfolio ▾</a>
+        <div class="nav__dropdown">
+          <a href="portfolio-builtfront.html"><span class="nav__dropdown-num">01</span>Builtfront SEO Growth</a>
+          <a href="portfolio-maxim.html"><span class="nav__dropdown-num">02</span>Maxim Hair Service Pages</a>
+          <a href="portfolio-heworitz.html"><span class="nav__dropdown-num">03</span>Heworitz Product Page</a>
+          <a href="portfolio-technical-audit.html"><span class="nav__dropdown-num">04</span>Real Estate Technical Audit</a>
+          <a href="portfolio-schema.html"><span class="nav__dropdown-num">05</span>Construction Schema Markup</a>
+          <a href="portfolio-workflow.html"><span class="nav__dropdown-num">06</span>Multi-Site Workflow</a>
+        </div>
+      </div>
+      <a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="blog.html">Blog</a>
     </div>
-    <a href="contact.html" class="nav__cta">Let's Talk</a>
-    <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav__right">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+      <a href="contact.html" class="nav__cta">Let's Talk</a>
+      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 <div class="nav__mobile">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <div class="nav__mobile-section">Portfolio</div>
+  <a href="portfolio.html" style="padding-left:1rem;font-size:.8rem">All Projects</a>
+  <a href="portfolio-builtfront.html" style="padding-left:1rem;font-size:.8rem">01 — Builtfront</a>
+  <a href="portfolio-maxim.html" style="padding-left:1rem;font-size:.8rem">02 — Maxim</a>
+  <a href="portfolio-heworitz.html" style="padding-left:1rem;font-size:.8rem">03 — Heworitz</a>
+  <a href="portfolio-technical-audit.html" style="padding-left:1rem;font-size:.8rem">04 — Technical Audit</a>
+  <a href="portfolio-schema.html" style="padding-left:1rem;font-size:.8rem">05 — Schema</a>
+  <a href="portfolio-workflow.html" style="padding-left:1rem;font-size:.8rem">06 — Workflow</a>
+  <a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Let's Talk</a>
 </div>
 
 <header class="page-header">
@@ -45,7 +65,7 @@
         <div class="service-row__num">01</div>
         <div class="service-row__content">
           <h3>Content Writing and Copywriting</h3>
-          <p>SEO-driven content that reads like a real person wrote it. Whether it's a 3,000-word blog post or a short service page, the goal is always the same: clear, useful, and built to rank.</p>
+          <p>SEO-driven content that reads like a real person wrote it. Whether it's a long-form blog post or a short service page, the goal is always clear, useful, and built to rank.</p>
           <div class="service-row__tags">
             <span class="service-tag">Long-form blog and article writing</span>
             <span class="service-tag">Landing and service page copy</span>
@@ -86,7 +106,7 @@
             <span class="service-tag">Broken link detection and fixes (Screaming Frog)</span>
             <span class="service-tag">SEO plugin setup (Yoast, Rank Math)</span>
             <span class="service-tag">Google Search Console monitoring</span>
-            <span class="service-tag">Schema markup implementation (JSON-LD)</span>
+            <span class="service-tag">Schema markup (JSON-LD)</span>
             <span class="service-tag">XML sitemap setup and management</span>
             <span class="service-tag">Crawl error resolution</span>
           </div>
@@ -97,7 +117,7 @@
         <div class="service-row__num">04</div>
         <div class="service-row__content">
           <h3>WordPress Publishing and Formatting</h3>
-          <p>For teams that just need posts published properly. Clean formatting, correct structure, SEO fields filled in, images optimized and placed. No chasing, no revisions because of bad uploads.</p>
+          <p>For teams that just need posts published properly. Clean formatting, correct structure, SEO fields filled in, images optimized and placed. No chasing, no re-uploads.</p>
           <div class="service-row__tags">
             <span class="service-tag">Clean WordPress publishing</span>
             <span class="service-tag">Post formatting and visual structure</span>
@@ -146,13 +166,13 @@
 
 <div class="divider"></div>
 
-<!-- HOW I WORK — redesigned approach cards -->
+<!-- MY APPROACH — smaller cards -->
 <section class="section section--alt">
   <div class="container">
     <div class="section-head reveal">
       <span class="label">My Approach</span>
       <h2>How I<br><em class="italic">Actually Work</em></h2>
-      <p>Not just completing tasks, but understanding why they matter and making sure nothing gets missed along the way.</p>
+      <p>Not just completing tasks — understanding why they matter and making sure nothing gets missed along the way.</p>
     </div>
     <div class="approach-steps reveal reveal-delay-1">
       <div class="approach-step">
@@ -185,10 +205,10 @@
 
 <footer class="footer"><div class="container">
   <div class="footer__grid">
-    <div><a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a><p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Based in the Philippines, available worldwide.</p><div class="footer__social-links"><a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://jqhnqdriqn.github.io/portfolio" target="_blank" rel="noopener" aria-label="GitHub">⌂</a></div></div>
+    <div><a href="index.html" class="footer__logo">John Adrian <span>Delos Santos</span></a><p class="footer__desc">SEO Content Specialist focused on keeping websites clean, consistent, and fully optimized. Based in the Philippines, available worldwide.</p><div class="footer__social-links"><a href="mailto:delossantosjohnadrian20@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener" aria-label="Upwork">U</a></div></div>
     <div class="footer__col"><h5>Pages</h5><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="tools.html">Tools</a><a href="skills.html">Skills</a></div>
-    <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" download>Download CV</a></div>
-    <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+    <div class="footer__col"><h5>More</h5><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank">View CV</a></div>
+    <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256" target="_blank" rel="noopener">Upwork Profile</a></div>
   </div>
   <div class="footer__bottom"><p class="footer__copy">© 2026 John Adrian Delos Santos. All rights reserved.</p><p class="footer__location"><span>📍</span> Taguig City, Philippines · Available for Freelance</p></div>
 </div></footer>
