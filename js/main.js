@@ -154,65 +154,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── CONTACT FORM (Formspree) ──────────────────────────────── */
+  /* ── CONTACT FORM ──────────────────────────────────────────── */
   const form = document.querySelector('.contact-form');
   if (form) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const success = document.querySelector('.form-success');
-      const btnSpan = btn.querySelector('span') || btn;
-
-      // Basic client-side validation
-      const name = form.querySelector('[name="name"]');
-      const email = form.querySelector('[name="email"]');
-      const message = form.querySelector('[name="message"]');
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        [name, email, message].forEach(field => {
-          if (!field.value.trim()) field.style.borderColor = 'var(--accent)';
-        });
-        return;
-      }
-
-      btnSpan.textContent = 'Sending...';
+      const orig = btn.textContent;
+      btn.textContent = 'Sending...';
       btn.disabled = true;
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        });
-
-        if (res.ok) {
-          btnSpan.textContent = 'Sent!';
-          if (success) success.style.display = 'block';
-          form.reset();
-          // Scroll success message into view
-          if (success) success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          setTimeout(() => {
-            btnSpan.textContent = 'Send Message';
-            btn.disabled = false;
-            if (success) success.style.display = 'none';
-          }, 6000);
-        } else {
-          const data = await res.json();
-          btnSpan.textContent = 'Try Again';
+      setTimeout(() => {
+        btn.textContent = 'Sent';
+        if (success) success.style.display = 'block';
+        setTimeout(() => {
+          btn.textContent = orig;
           btn.disabled = false;
-          if (data && data.errors) {
-            console.error('Formspree errors:', data.errors.map(e => e.message).join(', '));
-          }
-        }
-      } catch (err) {
-        btnSpan.textContent = 'Try Again';
-        btn.disabled = false;
-        console.error('Form submission error:', err);
-      }
-    });
-
-    // Clear red borders on input
-    form.querySelectorAll('input, textarea').forEach(field => {
-      field.addEventListener('input', () => { field.style.borderColor = ''; });
+          form.reset();
+          if (success) success.style.display = 'none';
+        }, 4000);
+      }, 1200);
     });
   }
 
