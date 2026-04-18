@@ -1,0 +1,4 @@
+interface:
+  display_name: "Component Consistency"
+  short_description: "Normalize buttons, cards, and section styling"
+  default_prompt: "Use $component-consistency to make repeated UI elements on this portfolio feel visually consistent and system-based."

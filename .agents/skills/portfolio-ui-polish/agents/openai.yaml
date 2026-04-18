@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio UI Polish"
+  short_description: "Polish portfolio UI without redesigning"
+  default_prompt: "Use $portfolio-ui-polish to apply premium UI polish to this portfolio without changing the core content strategy."

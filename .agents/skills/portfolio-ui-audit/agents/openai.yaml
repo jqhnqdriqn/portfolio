@@ -1,0 +1,5 @@
+interface:
+  display_name: "Portfolio UI Audit"
+  short_description: "Audit portfolio UI polish and premium feel"
+  default_prompt: "Use $portfolio-ui-audit to review this portfolio for premium UI/UX quality and prioritize the highest-impact design improvements."
+

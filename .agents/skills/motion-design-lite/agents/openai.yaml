@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Design Lite"
+  short_description: "Add subtle, professional motion only"
+  default_prompt: "Use $motion-design-lite to refine this portfolio with subtle motion and hover states without adding flashy animation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Readability Optimizer"
+  short_description: "Tighten copy for faster scanning"
+  default_prompt: "Use $readability-optimizer to improve scanability and readability on this portfolio without changing the core message."

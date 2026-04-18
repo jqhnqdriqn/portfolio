@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
@@ -15,11 +15,9 @@
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
       <span class="nav__logo-name">John Adrian Delos Santos</span>
-      <span class="nav__logo-sub">SEO Content Specialist</span>
     </a>
     <div class="nav__links">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <div class="nav__item">
         <a href="portfolio.html" class="nav__item-label">Portfolio &#x25BE;</a>
@@ -30,26 +28,23 @@
           <a href="portfolio-technical-audit.html"><span class="nav__dropdown-num">-</span>Technical Audit</a>
           <a href="portfolio-schema.html"><span class="nav__dropdown-num">-</span>Schema Markup</a>
           <a href="portfolio-workflow.html"><span class="nav__dropdown-num">-</span>Multi-Site Workflow</a>
+          <a href="blog.html"><span class="nav__dropdown-num">-</span>Writing Samples</a>
         </div>
       </div>
-      <a href="skills.html">Skills</a>
-      <a href="tools.html">Tools</a>
-      <a href="blog.html" class="active">Blog</a>
+      <a href="about.html">About</a>
     </div>
     <div class="nav__right">
       <button class="theme-toggle" aria-label="Toggle dark mode">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
-      <a href="contact.html" class="nav__cta">Let's Talk</a>
+      <a href="contact.html" class="nav__cta">Contact Me</a>
       <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
-
 <div class="nav__mobile">
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <div class="nav__mobile-section">Portfolio</div>
   <a href="portfolio.html" style="padding-left:1rem;font-size:.8rem">- My Portfolio</a>
@@ -58,25 +53,51 @@
   <a href="portfolio-technical-audit.html" style="padding-left:1rem;font-size:.8rem">- Technical Audit</a>
   <a href="portfolio-schema.html" style="padding-left:1rem;font-size:.8rem">- Schema Markup</a>
   <a href="portfolio-workflow.html" style="padding-left:1rem;font-size:.8rem">- Multi-Site Workflow</a>
-  <a href="skills.html">Skills</a>
-  <a href="tools.html">Tools</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Let's Talk</a>
+  <a href="blog.html" style="padding-left:1rem;font-size:.8rem">- Writing Samples</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <header class="page-header">
   <div class="container">
     <span class="label">Writing Samples</span>
-    <h1>Articles I've<br><em class="italic gold">Written and Published</em></h1>
-    <p style="max-width:52ch;margin-top:1rem;font-size:1.05rem">These are live published pieces I wrote as part of client SEO content projects. They cover a range of industries, formats, and search intents, each one built and optimized to rank.</p>
+    <h1>Published SEO and<br><em class="italic gold">Content Writing Samples</em></h1>
+    <p style="max-width:54ch;margin-top:1rem;font-size:1.05rem">A curated selection of live articles, commercial pages, and search-focused content written for client projects. These samples are grouped by industry and content type so the page feels like a showcase, not an archive.</p>
   </div>
 </header>
 
 <section class="section">
   <div class="container">
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">Product Page: Heworitz.eu</div>
+    <div class="writing-intro-card reveal">
+      <div>
+        <span class="label">Selected Work</span>
+        <h2>Real Published Work<br><em class="italic">Across Multiple Industries</em></h2>
+        <p>These samples show the range of topics and formats I write across, from commercial pages and product content to long-form SEO articles built for search visibility and readability.</p>
+      </div>
+      <div class="writing-intro-meta">
+        <span class="writing-meta-pill">SEO articles</span>
+        <span class="writing-meta-pill">Commercial pages</span>
+        <span class="writing-meta-pill">Industry-specific topics</span>
+        <span class="writing-meta-pill">Grouped by niche</span>
+      </div>
+    </div>
+
+    <div class="filter-tabs writing-filters reveal reveal-delay-1">
+      <button class="filter-tab active" data-writing-filter="all">All Samples</button>
+      <button class="filter-tab" data-writing-filter="product">Commercial Pages</button>
+      <button class="filter-tab" data-writing-filter="construction">Construction</button>
+      <button class="filter-tab" data-writing-filter="real-estate">Real Estate</button>
+      <button class="filter-tab" data-writing-filter="ecommerce">eCommerce</button>
+      <button class="filter-tab" data-writing-filter="finance">Finance and Legal</button>
+      <button class="filter-tab" data-writing-filter="technology">Technology and AI</button>
+    </div>
+
+    <div class="blog-category-section reveal" data-writing-category="product">
+      <div class="blog-category-head">
+        <div class="blog-category-label">Commercial and Product Pages</div>
+        <p>Examples of commercial page work where structure, clarity, and on-page SEO matter as much as the copy itself.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://heworitz.eu" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -93,8 +114,11 @@
       </div>
     </div>
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">Construction and Contracting: Builtfront.com</div>
+    <div class="blog-category-section reveal" data-writing-category="construction">
+      <div class="blog-category-head">
+        <div class="blog-category-label">Construction and Contracting</div>
+        <p>Search-focused articles written for contractor, construction, and adjacent B2B audiences.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://builtfront.com/blog/types-of-subcontractors-in-construction/" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -189,8 +213,11 @@
       </div>
     </div>
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">Real Estate and Property Management</div>
+    <div class="blog-category-section reveal" data-writing-category="real-estate">
+      <div class="blog-category-head">
+        <div class="blog-category-label">Real Estate and Property Management</div>
+        <p>Articles written for rental, HOA, and property-management topics where accuracy and practical clarity matter.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://basehoa.com/hoa-statement/" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -246,8 +273,11 @@
       </div>
     </div>
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">eCommerce and SaaS: Outmerce.com</div>
+    <div class="blog-category-section reveal" data-writing-category="ecommerce">
+      <div class="blog-category-head">
+        <div class="blog-category-label">eCommerce and SaaS</div>
+        <p>Commercial and educational content written for online selling, conversion, and software-related topics.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://outmerce.com/blog/how-to-start-ecommerce-business" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -277,8 +307,11 @@
       </div>
     </div>
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">Finance, Immigration, and Tech</div>
+    <div class="blog-category-section reveal" data-writing-category="finance">
+      <div class="blog-category-head">
+        <div class="blog-category-label">Finance, Immigration, and Legal</div>
+        <p>Research-heavy content covering regulated, comparison-driven, and trust-sensitive topics.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://www.changeinvest.com/blog/beginner-guide-to-cfd-trading" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -360,8 +393,11 @@
       </div>
     </div>
 
-    <div class="blog-category-section reveal">
-      <div class="blog-category-label">Technology, AI, and Compliance</div>
+    <div class="blog-category-section reveal" data-writing-category="technology">
+      <div class="blog-category-head">
+        <div class="blog-category-label">Technology, AI, and Compliance</div>
+        <p>Long-form articles written for software, AI, and compliance topics that need clear structure and stronger readability.</p>
+      </div>
       <div class="blog-grid">
         <a href="https://technori.com/2025/12/23479-7-best-ai-automation-platforms-for-2026-visual-smart-and-scalable/izabela-misiorny/" target="_blank" rel="noopener" class="blog-card">
           <div class="blog-card__thumb">
@@ -450,7 +486,7 @@
   <div class="container">
     <h2>Need Content<br><em class="italic">Like This for Your Site?</em></h2>
     <p>Let's talk about what kind of content would move the needle for your website.</p>
-    <a href="contact.html" class="btn btn--outline-dark"><span>Get In Touch</span></a>
+    <a href="contact.html" class="btn btn--outline-dark"><span>Contact Me</span></a>
   </div>
 </div>
 
@@ -466,8 +502,8 @@
           <a href="https://www.upwork.com/freelancers/~0129099dc799132256?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork">U</a>
         </div>
       </div>
-      <div class="footer__col"><h5>Pages</h5><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="tools.html">Tools</a><a href="skills.html">Skills</a></div>
-      <div class="footer__col"><h5>More</h5><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank">View CV</a></div>
+      <div class="footer__col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer__col"><h5>More</h5><a href="contact.html">Contact</a><a href="assets/cv/CV-John-Adrian-Delos-Santos.pdf" target="_blank">View CV</a></div>
       <div class="footer__col"><h5>Contact</h5><a href="mailto:delossantosjohnadrian20@gmail.com">delossantosjohnadrian20@gmail.com</a><a href="https://www.linkedin.com/in/john-adrian-delos-santos" target="_blank" rel="noopener">LinkedIn Profile</a><a href="https://www.upwork.com/freelancers/~0129099dc799132256?mp_source=share" target="_blank" rel="noopener">Upwork Profile</a></div>
     </div>
     <div class="footer__bottom">
@@ -481,3 +517,12 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

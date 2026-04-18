@@ -1,0 +1,4 @@
+interface:
+  display_name: "Premium UI System"
+  short_description: "Enforce premium, minimal design decisions"
+  default_prompt: "Use $premium-ui-system to ensure this portfolio follows premium UI principles without becoming generic or overdesigned."

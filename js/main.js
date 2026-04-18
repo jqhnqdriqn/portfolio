@@ -154,6 +154,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* WRITING SAMPLES FILTER */
+  const writingFilterTabs = document.querySelectorAll('[data-writing-filter]');
+  const writingSections = document.querySelectorAll('[data-writing-category]');
+  if (writingFilterTabs.length && writingSections.length) {
+    writingFilterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        writingFilterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.writingFilter;
+        writingSections.forEach(section => {
+          const show = filter === 'all' || section.dataset.writingCategory === filter;
+          section.classList.toggle('is-hidden', !show);
+        });
+      });
+    });
+  }
+
   /* ── CONTACT FORM (Formspree) ──────────────────────────────── */
   const form = document.querySelector('.contact-form');
   if (form) {

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conversion Flow Check"
+  short_description: "Check hero-to-proof-to-CTA flow"
+  default_prompt: "Use $conversion-flow-check to review and refine the conversion flow on this portfolio without changing its core structure."
