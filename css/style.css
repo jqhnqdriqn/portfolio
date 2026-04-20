@@ -226,8 +226,8 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
   margin: 0 auto;
   padding: 0 clamp(1.25rem,5vw,3rem);
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
+  grid-template-columns: minmax(0,1.24fr) minmax(300px,.76fr);
+  gap: clamp(2.5rem,5vw,4rem);
   align-items: center;
 }
 
@@ -282,14 +282,21 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
 .hero__name {
   display: flex;
   flex-direction: column;
+  width: max-content;
+  max-width: 100%;
+  font-size: clamp(4.25rem,7vw,6.4rem);
+  line-height: .98;
   margin-bottom: 1.25rem;
 }
-.hero__name-first {
+.hero__name-first,
+.hero__name-last {
   display: block;
+  white-space: nowrap;
+}
+.hero__name-first {
   color: var(--text);
 }
 .hero__name-last {
-  display: block;
   color: var(--accent);
   font-style: italic;
 }
@@ -928,6 +935,12 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
 }
 @media(max-width:768px){
   .hero__cta{flex-direction:column;align-items:flex-start}
+  .hero__name{
+    width:auto;
+    font-size:clamp(3.2rem,15vw,5rem);
+  }
+  .hero__name-first,
+  .hero__name-last{white-space:normal}
   .hero__social{flex-wrap:wrap;gap:1rem}
   .hero__badge{left:0}
 }
