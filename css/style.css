@@ -181,7 +181,10 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
 
 /* ── PAGE HEADER ─────────────────────────────────────────────── */
 .page-header{padding:calc(var(--nav-h) + 4rem) 0 3.5rem;border-bottom:1px solid var(--border)}
-.page-header h1{font-size:clamp(2.5rem,6vw,5rem)}
+.page-header h1{
+  font-size:clamp(2.35rem,4.6vw,4.35rem);
+  line-height:1.06;
+}
 
 /* ── SECTION HEAD ─────────────────────────────────────────────── */
 .section-head{margin-bottom:clamp(2.5rem,5vw,4rem)}
@@ -222,7 +225,7 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
   z-index: 1;
   flex: 1;
   width: 100%;
-  max-width: 100%;
+  max-width: min(100%,1360px);
   margin: 0 auto;
   padding: 0 clamp(1.25rem,5vw,3rem);
   display: grid;
@@ -284,7 +287,7 @@ li{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text-muted);line-height:1.7
   flex-direction: column;
   width: max-content;
   max-width: 100%;
-  font-size: clamp(5rem,6.5vw,6.75rem);
+  font-size: clamp(4.75rem,5.6vw,6rem);
   line-height: .98;
   margin-bottom: 1.25rem;
 }
