@@ -27,14 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav__toggle');
   const mobileMenu = document.querySelector('.nav__mobile');
   if (toggle && mobileMenu) {
+    if (!mobileMenu.id) mobileMenu.id = 'mobileMenu';
+    toggle.setAttribute('aria-controls', mobileMenu.id);
+    toggle.setAttribute('aria-expanded', 'false');
+
+    const setMobileMenuState = (open) => {
+      toggle.classList.toggle('open', open);
+      mobileMenu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+
     toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
+      setMobileMenuState(!mobileMenu.classList.contains('open'));
     });
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        mobileMenu.classList.remove('open');
+        setMobileMenuState(false);
       });
     });
   }
@@ -123,13 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── FAQ ACCORDION ─────────────────────────────────────────── */
   const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
+  faqItems.forEach((item, index) => {
     const trigger = item.querySelector('.faq-trigger');
+    const body = item.querySelector('.faq-body');
     if (trigger) {
+      const bodyId = body?.id || `faq-body-${index + 1}`;
+      if (body) body.id = bodyId;
+      trigger.setAttribute('type', 'button');
+      trigger.setAttribute('aria-controls', bodyId);
+      trigger.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
       trigger.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
-        faqItems.forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+        faqItems.forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
       });
     }
   });
@@ -139,16 +159,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioCards = document.querySelectorAll('.portfolio-card[data-cat]');
   if (filterTabs.length && portfolioCards.length) {
     filterTabs.forEach(tab => {
+      tab.setAttribute('type', 'button');
+      tab.setAttribute('aria-pressed', tab.classList.contains('active') ? 'true' : 'false');
       tab.addEventListener('click', () => {
-        filterTabs.forEach(t => t.classList.remove('active'));
+        filterTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-pressed', 'false');
+        });
         tab.classList.add('active');
+        tab.setAttribute('aria-pressed', 'true');
         const filter = tab.dataset.filter;
         portfolioCards.forEach(card => {
           const show = filter === 'all' || card.dataset.cat === filter;
-          card.style.opacity = show ? '1' : '0.2';
-          card.style.pointerEvents = show ? 'auto' : 'none';
-          card.style.transform = show ? '' : 'scale(0.97)';
-          card.style.transition = 'opacity .35s, transform .35s';
+          card.classList.toggle('is-filtered-out', !show);
+          card.setAttribute('aria-hidden', show ? 'false' : 'true');
         });
       });
     });
@@ -159,9 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const writingSections = document.querySelectorAll('[data-writing-category]');
   if (writingFilterTabs.length && writingSections.length) {
     writingFilterTabs.forEach(tab => {
+      tab.setAttribute('type', 'button');
+      tab.setAttribute('aria-pressed', tab.classList.contains('active') ? 'true' : 'false');
       tab.addEventListener('click', () => {
-        writingFilterTabs.forEach(t => t.classList.remove('active'));
+        writingFilterTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-pressed', 'false');
+        });
         tab.classList.add('active');
+        tab.setAttribute('aria-pressed', 'true');
         const filter = tab.dataset.writingFilter;
         writingSections.forEach(section => {
           const show = filter === 'all' || section.dataset.writingCategory === filter;
@@ -183,9 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Basic client-side validation
       const name = form.querySelector('[name="name"]');
       const email = form.querySelector('[name="email"]');
+      const service = form.querySelector('[name="service"]');
       const message = form.querySelector('[name="message"]');
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        [name, email, message].forEach(field => {
+      if (!name.value.trim() || !email.value.trim() || !service?.value.trim() || !message.value.trim()) {
+        [name, email, service, message].filter(Boolean).forEach(field => {
           if (!field.value.trim()) field.style.borderColor = 'var(--accent)';
         });
         return;
@@ -228,8 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Clear red borders on input
-    form.querySelectorAll('input, textarea').forEach(field => {
+    form.querySelectorAll('input, textarea, select').forEach(field => {
       field.addEventListener('input', () => { field.style.borderColor = ''; });
+      field.addEventListener('change', () => { field.style.borderColor = ''; });
     });
   }
 
